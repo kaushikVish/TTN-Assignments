@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>JavaScript Assignment</title>
+</head>
+
+<body>
+    <div id="div1">Hello and Welcome to jQuery</div>
+    <table>
+        <tr> <button type="button">cross button</button></tr>
+    </table>
+</body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+    $(document).ready(function () {
+
+        $("button").click(function () {
+            $.ajax({
+                url: "http://api.open-notify.org/iss-now.json",
+                async: 'true',
+                dataType: 'text',
+                type: 'GET',
+                success: function (result) {
+                    setTimeout(function () {
+                        console.log(result);
+                        $('#div1').append('</br>' + result);
+                        $('button').remove();
+
+                        $('table tr').append('</br>button removed');
+                    }, 1000);
+                }, error: function () {
+                    console.log("error");
+                }
+            });
+        });
+    });
+</script>
+
+</html>

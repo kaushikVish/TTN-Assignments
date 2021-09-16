@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>jQuery Assignment</title>
+</head>
+
+<body>
+    <div id="click">
+        <button>Click Me</button>
+    </div>
+
+</body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $('button').click(() => {
+            $('#click').append('<p>Click me again</p>');
+        
+        $('p').on("click",()=>{
+            $('#click').append('<span>Click third time </span>');
+        })
+    })
+    })
+</script>
+
+</html>

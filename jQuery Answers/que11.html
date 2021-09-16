@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>jQuery Assignment</title>
+</head>
+
+<body>
+    <a id='google' href='http://www.google.com'> Google <p></a>
+</body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+    $(document).ready(function () {
+       $('#google').click((e)=>{
+           e.preventDefault();
+       })
+    })
+</script>
+
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>jQuery Assignment</title>
+</head>
+
+<body>
+    <table id="table1">
+        <tr>
+            <td>1</td>
+            <td>2</td>
+        </tr>
+        <tr>
+            <td>1110</td>
+            <td>3</td>
+        </tr>
+        <tr>
+            <td>8</td>
+            <td>200</td>
+        </tr>
+        <tr>
+            <td>100</td>
+            <td>2</td>
+        </tr>
+        <tr>
+            <td>7</td>
+            <td>900</td>
+        </tr>
+    </table>
+
+</body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $('#table1 td').each(function(){
+            if ($(this).text() > 10) {
+                $(this).css('color', 'red');
+            }
+        })
+    })
+</script>
+
+</html>

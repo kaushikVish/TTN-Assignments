@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>jQuery Assignment</title>
+</head>
+
+<body>
+    <div>Hello World</div>
+</body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+    $(document).ready(function () {
+
+        $("div").replaceWith("<p>"+$("div").text()+"</p>")
+    })
+</script>
+
+</html>

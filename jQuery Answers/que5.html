@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>jQuery Assignment</title>
+</head>
+
+<body>
+    <div  id="main">
+        <h1 class="target">Hello World</h1>  
+    </div>
+    
+</body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+    $(document).ready(function () {
+
+        $('.target').parent("#main").css("font-size","100px")
+    })
+</script>
+
+</html>

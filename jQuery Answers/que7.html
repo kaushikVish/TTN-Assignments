@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>jQuery Assignment</title>
+</head>
+
+<body>
+    <div id ="click">
+        <button>Click Element</button>
+    </div>
+</body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+    $(document).ready(function () {
+        
+        $('button').click(()=>{
+            $('#click').append("append1 ");
+        })
+        $('#click').click(()=>{
+            $('#click').append("append2  ");
+        });
+    })
+</script>
+
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Clock</title>
+</head>
+<style>
+    body{
+        background-color: royalblue;
+        color: white;
+    }
+    #digitalClock{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 200px;
+        font-size: 50px;
+        font-weight: 600;
+    }
+</style>
+<body >
+    <div id="digitalClock">
+        <div id="wish"></div>
+        <div id="time"></div>
+        <div id="day"></div>
+    </div>
+    <script>
+        // setInterval(abc, 1000);
+        function abc(){
+            var time=new Date();
+            let date=time.getDate();
+            let day = time.getDay();
+            let year=time.getFullYear();
+            let hour=time.getHours();
+            let min=time.getMinutes();
+            let sec=time.getSeconds();
+            let am_pm = "AM";
+            let wish="Good Morning";
+
+            if(hour>=12 && hour <17){
+                wish="Good AfterNoon";
+            }
+            else if(hour>17 && hour<20){
+                wish="Good Evening";
+            }
+            else{
+                wish="Good Night";
+            }
+
+
+            if(hour > 12){
+                hour-=12;
+                am_pm="PM";
+            }
+            else if(hour==0){
+                hour=12;
+                am_pm="AM";
+                wish="Good Morning";
+            }
+
+            hour = hour < 10 ? "0" + hour : hour;
+            min = min < 10 ? "0" + min : min;
+            sec = sec < 10 ? "0" + sec : sec;
+
+            let weekdays=["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"];
+            
+            let currentTime = hour + ":" + min + ":" + sec +" " + am_pm;
+            let currentDay = date + " " + weekdays[2-1] + " " + year;
+
+
+            document.getElementById("wish").innerHTML +=
+            wish;
+
+            document.getElementById("time").innerHTML +=
+            currentTime;
+
+            document.getElementById("day").innerHTML +=
+            currentDay;
+        }
+
+        abc();
+    </script>
+</body>
+
+</html>

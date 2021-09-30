@@ -13,13 +13,15 @@
 </body>
 <script>
     function abc() {
-        var arr = [1, 2, 3, 4, 5];
-
+        let arr = [10, 21, 31, 4, 5];
+        for(let i=0;i<arr.length;i++){
         setTimeout(function () {
-            arr.map((item) => {
-                document.writeln(item)
-            })
-        }, 3000);
+           
+           {
+               document.writeln(arr[i]);
+           }
+        }, i*3000);
+    }
     }
     abc();
 </script>
